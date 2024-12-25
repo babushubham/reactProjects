@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import authService from './appwrite/auth';
 import login  from './store/authSlice';
+import logout from './store/authSlice';
+import Header from './components/Header'
 
 
 function App() {
@@ -25,7 +27,12 @@ useEffect(()=>{
 ,[])
 
 
-  return !loading ? (<> <h1>hello</h1> </>) : null
+  return !loading ? (<> 
+    <Header/>
+    <h1>hello guyzz</h1>
+     </>
+    ) 
+    : null
 }
 
 export default App
